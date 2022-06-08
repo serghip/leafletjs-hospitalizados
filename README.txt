@@ -1,13 +1,9 @@
-Inicializacion package.json con : " npm init -y "
-Configuracion atajo nodemon dentro de package.json : "script" : {"dev" : "nodemon app"} ; llamada en consola: npm run dev
-Optional: npm i express
-          npm i nodemon ejs -D
-          Se puede desinstalar: npm uninstall nombremodulo
-Configuracion de app.js de arranque, llamada a express, ejs, seteo bodyparser, render del index.ejs y print en console
-Preparacion de views/index.ejs basico con llamada a public(css/js).
-Creacion de public(css/js)
-Invocacion de Libreria Leafjs mediante cdn
+DESCRIPTION: Mapa interactivo con marcadores de ubicacion de personas hospitalizadas. Cuenta con una tabla dinamica clickeable y dos filtros de ubicacion. La informacion simula ser recibida por base de datos. Se define el uso de dos base diferentes, una con datos de hospitalizados otra con datos de hospital y ubicacion.
+Uso de express, jquery(ajax), leafletJS(mas plugins) de manera local, bootstrap. 
 
---
-
-Mapa que muestra las unidades penitenciarias de la provincia de buenos aires, con filtro por unidad y por cantidad de hechos de violencia. 
+INICIALIZACION:
+Abra el proyecto dentro de su editor de codigo.
+Instale las dependencias:
+npm i express morgan 
+Inicilialize el proyecto:
+npm run start
