@@ -20,7 +20,6 @@ document.getElementById('select-location-hospital').addEventListener('change', f
 document.getElementById('select-location-paciente').addEventListener('change', function (e) {
   document.getElementById('inicialPaciente').style.display = "none";
   let coords = e.target.value.split(",");
-  console.log(e.target.value)
   map.flyTo(coords, 14);
 });
 //Redireccion table pacientes
