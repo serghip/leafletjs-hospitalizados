@@ -1,0 +1,22 @@
+[
+    {
+        "descripcion": "HOSPITAL DR. RAMÓN CARRILLO",
+        "lat": "-34.50715",
+        "long": "-58.70584"
+    },
+    {
+        "descripcion": "HOSPITAL ALEJANDRO KORN -M.ROMERO",
+        "lat": "-34.95564",
+        "long": "-58.05246"
+    },
+    {
+        "descripcion": "HOSPITAL MI PUEBLO - F.VARELA",
+        "lat": "-34.81865",
+        "long": "-58.27079"
+    },
+    {
+        "descripcion": "HOSPITAL ANGEL PINTOS-AZUL",
+        "lat": "-36.76983",
+        "long": "-59.85887"
+    }
+]

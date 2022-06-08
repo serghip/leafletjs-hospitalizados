@@ -1,0 +1,30 @@
+[
+    {
+        "apeynom": "AVALOS VAZQUEZ MAXIMILIANO LEANDRO",
+        "hospital": "HOSPITAL DR. RAMÓN CARRILLO",
+        "ing": "01/05/2022",
+        "egr": "",
+        "estado": "ACTIVO/A"
+    },
+    {
+        "apeynom": "CANTINI ANDRADE MATIAS DAVID",
+        "hospital": "HOSPITAL DR. RAMÓN CARRILLO",
+        "ing": "01/05/2022",
+        "egr": "",
+        "estado": "ACTIVO/A"
+    },
+    {
+        "apeynom": "CABRAL LOPEZ ALEJANDRO",
+        "hospital": "HOSPITAL MI PUEBLO - F.VARELA",
+        "ing": "01/05/2022",
+        "egr": "",
+        "estado": "ACTIVO/A"
+    },
+    {
+        "apeynom": "CAZARINI SETAU NELIDA MARIANA",
+        "hospital": "HOSPITAL ANGEL PINTOS-AZUL",
+        "ing": "25/12/2021",
+        "egr": "28/12/2021",
+        "estado": "INACTIVO/A"
+    }
+]

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Mapa hospitalizados</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Aqui la descripcion">
+    <!-- My css-->
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <!-- Leanfletjs -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    <!-- Leaflet.markercluster plugin -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+        integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+        crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"
+        integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="/leaflet.markercluster/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="/leaflet.markercluster/dist/MarkerCluster.Default.css">
+    <script src="/leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
+    <!--Leaflet Responsive Popup-->
+    <script src="https://unpkg.com/leaflet-responsive-popup@0.6.4/leaflet.responsive.popup.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-responsive-popup@0.6.4/leaflet.responsive.popup.css" />
+
+    <!-- Bootstrap -->
+    <link rel=" stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<body>
+
+    <style>
+        #container-filter {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            box-shadow: 5px 5px 5px #888;
+            background-color: antiquewhite;
+            text-shadow: white;
+        }
+
+        #location option {
+            margin-top: 10px;
+        }
+
+        #map {
+            width: 100%;
+            height: 500px;
+            box-shadow: 5px 5px 5px #888;
+            z-index: 1;
+        }
+    </style>
+
+    <div class="container-fluid" id="container-filter">
+        <div class="row justify-content-center align-items-center minh-100">
+            <div class="col-6" id="select-location-hospital">
+                <h5>Filtro por hospital </h5>
+                <select name="locationHospital" id="locationHospital">
+                    <option id="inicialHospital"> Seleccione hospital</option>
+                    <!--Aqui van los hospitales-->
+                </select>
+            </div>
+
+            <div class="col-6" id="select-location-paciente">
+                <h5>Filtro por paciente </h5>
+                <select name="locationPaciente" id="locationPaciente" style="min-width: 400px;">
+                    <option id="inicialPaciente"> Seleccione paciente</option>
+                    <!--Aqui van los pacientes-->
+                </select>
+            </div>
+
+        </div>
+    </div>
+    <div class="row justify-content-center mt-2 mb-2 ml-2 mr-2">
+        <div class="col-6" id="map"></div>
+        <div class="col-6" style="font-size: 12px">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Apellido y nombre</th>
+                        <th scope="col">Hospital</th>
+                        <th scope="col">Lat</th>
+                        <th scope="col">Long</th>
+                        <th scope="col">Ingreso</th>
+                        <th scope="col">Egreso</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+                <tbody onclick="clickTable(event)" id="tablePaciente" style="cursor: pointer;">
+                    <!--Aqui van los pacientes-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+    <!--App -->
+    <script src="app.js"></script>
+</body>
+
+</html>
