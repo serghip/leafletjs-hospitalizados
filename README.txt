@@ -1,7 +1,7 @@
 INICIALIZACION:
 Abra el proyecto dentro de su editor de codigo.
 
-Instale las dependencias:
+Instale las dependencias mediante la terminal del editor de codigos:
 npm i express
 
 Inicilialize el proyecto:
